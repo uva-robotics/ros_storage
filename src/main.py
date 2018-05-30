@@ -6,7 +6,10 @@ from diagnostic_msgs.msg import DiagnosticArray
 import MySQLdb
 import random
 
-db = MySQLdb.connect(host="localhost",
+import os
+mysql_server = os.environ['MYSQL_SERVER']
+
+db = MySQLdb.connect(host=mysql_server,
                      user="root",
                      passwd="root",
                      db="test")
